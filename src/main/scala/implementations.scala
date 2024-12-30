@@ -19,49 +19,6 @@ def demo(m: MutableMap[Int]) = {
 def mainContracts() = demo(ImmutableHashMap())
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * Implementation of [[MutableMap]] backed by a [[immutable.HashMap]].
  */
@@ -75,50 +32,6 @@ class ImmutableHashMap[V] extends MutableMap[V] {
 
   override def contains(key: String): Boolean = entries.isDefinedAt(key)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
@@ -150,49 +63,6 @@ class ImmutableHashMapContract[V] extends MutableMap[V] {
     assert(entriesBefore eq entries, "This method should not modify the map.")
     result
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
@@ -235,47 +105,6 @@ class InefficientListMap[V] extends MutableMap[V] {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
  * Implementation of [[MutableMap]] backed by a list of entries and a separate set of keys.
  *
@@ -309,48 +138,6 @@ class MoreEfficientListMap[V] extends MutableMap[V] {
 
   override def contains(key: String): Boolean = keys.contains(key)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
